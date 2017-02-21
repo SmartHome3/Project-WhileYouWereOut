@@ -1,0 +1,97 @@
+//Dont need to import much by default
+import org.joda.time.*
+
+var Timer timer1 = null
+var Timer movement_timer = null
+var Timer timer_logout = null
+var movement_timeout = 20
+var Timer Security_Alarm = null
+var security_timeout = 10
+
+rule "Start up"
+when
+    System started
+then
+    office_logged_in.send(ON)
+    office_secure.send(OFF)
+    motion_sensor.send(ON)
+    office_logout.send(OFF)
+end
+
+rule "Logout Switch off"
+when
+    Item office_logout changed to ON
+then
+	office_logged_in.send(OFF)
+	office_relay1.send(OFF)
+	Thread::sleep(2000)
+	office_relay2.send(OFF)
+	Thread::sleep(2000)
+	office_relay3.send(OFF)
+	Thread::sleep(2000)
+        timer_logout = createTimer(now.plusSeconds(10),[|
+	// Give the user time to lock up
+        timer_logout = null 
+        office_secure.send(ON)
+    ])
+end
+
+rule "Check UID and Login"
+when
+    Item office_uid changed
+then
+    if(office_uid.state=="185-111-81-229"){
+	//Do everything needed for startup
+	office_relay4.send(OFF)
+	Thread::sleep(5000)
+	office_relay1.send(ON)
+	Thread::sleep(3000)
+	office_relay2.send(ON)
+	Thread::sleep(3000)
+	office_relay3.send(ON)	
+	Thread::sleep(3000)
+	office_logged_in.send(ON)
+	// Once logged in, Disable Security Alarm
+	Security_Alarm.cancel
+	Security_Alarm = null
+	office_secure.send(OFF)
+	office_logout.send(OFF)
+    }
+end
+
+rule "No Movement"
+when
+    Item motion_sensor changed to OFF
+then
+    movement_timer = createTimer(now.plusSeconds(movement_timeout),[|
+	//This code will execute on absence
+	//Cancel it if motion is detected within timeout
+	office_logged_in.send(OFF)
+	office_relay1.send(OFF)
+	Thread::sleep(2000)
+	office_relay2.send(OFF)
+	Thread::sleep(2000)
+	office_relay3.send(OFF)
+	Thread::sleep(2000)
+        movement_timer = null
+	// Security Alarm Timer- To allow login without sirens
+	Security_Alarm = createTimer(now.plusMinutes(security_timeout),[|
+	    office_secure.send(ON)
+ 	    Security_Alarm = null
+    ])
+end
+
+rule "Movement"
+when
+    Item motion_sensor changed to ON
+then    
+    if(office_logged_in.state==ON){
+	if(movement_timer != null){
+	    movement_timer.cancel
+	    movement_timer = null
+	    // movement_timer.reschedule(now.plusSeconds(movement_timeout))
+    } else if(office_secure.state==ON){
+    	// Alarm!! No one Logged in and there is movement?
+	office_relay4.send(ON)
+    }
+end

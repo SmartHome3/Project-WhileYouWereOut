@@ -1,0 +1,5 @@
+C:\Users\inderpreet\Desktop\Proj_WhileYouWereOut\PSOCFirmware\AnalogCoProcessor_Design.cydsn\AnalogCoProcessor_Design.cyprj|03a6f16c-16e4-4e02-a18d-d242b6dfd0c3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|78a4e853-db74-439d-bd2e-1bb14cf962f4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|52c94c2e-d834-4e94-8fa2-beba89626e66
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1cab2b1e-3cc9-4227-8019-a8a3c147fa0b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d191e404-46e3-4ffc-a39d-21738074ed37

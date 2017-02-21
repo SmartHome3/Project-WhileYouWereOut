@@ -1,0 +1,24 @@
+sitemap default label="Main Menu"
+{
+	Frame label="Office"{
+		Text item=motion_sensor label="Motion Sensor"
+		Text item=office_temp valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]	
+		Text item=office_humi
+		Text item=office_illu
+		Switch item=office_relay1
+		Switch item=office_relay2
+                Switch item=office_relay3
+                Switch item=office_relay4
+		Text item=office_logged_in
+		Switch item=office_secure
+                Text item=office_uid
+		Switch item=office_logout
+		Text label="Debugging" icon="zoom"{
+			Text item=coprocessor
+			Text item=or1
+			Text item=or2
+			Text item=or3
+			Text item=or4
+		}
+	}
+}

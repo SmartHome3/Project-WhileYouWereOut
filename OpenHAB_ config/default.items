@@ -1,0 +1,22 @@
+
+Switch motion_sensor "Motion Sensor is [%s]" <camera> {mqtt="<[eclipse:test019/server/motion:state:default]" }
+Number office_temp "Office Temperature [%.1f °C]" <temperature> {mqtt="<[eclipse:test019/server/temperature:state:default]" }
+Number office_illu "Light Levels [%d lux]" <sun> {mqtt="<[eclipse:test019/server/illumination:state:default]" }
+Number office_humi "Humidity [%d]" <humidity> {mqtt="<[eclipse:test019/server/humidity:state:default]" }
+String office_uid "Last UID [%s]" <present> {mqtt="<[eclipse:test019/server/uid:state:default]" }
+
+Switch office_relay1 "Lights" <light> {mqtt=">[eclipse:test019/coprocessor:command:*:R1 ${command}]" }
+Switch office_relay2 "Fan" <fan_ceiling> {mqtt=">[eclipse:test019/coprocessor:command:*:R2 ${command}]" }
+Switch office_relay3 "Monitors" <television> {mqtt=">[eclipse:test019/coprocessor:command:*:R3 ${command}]" }
+Switch office_relay4 "Sirens" <siren> {mqtt=">[eclipse:test019/coprocessor:command:*:R4 ${command}]" }
+
+Switch or1 "relay1 status" <light> {mqtt="<[eclipse:test019/R1:state:default]"}
+Switch or2 "relay2 status" <light> {mqtt="<[eclipse:test019/R2:state:default]"}
+Switch or3 "relay3 status" <light> {mqtt="<[eclipse:test019/R3:state:default]"}
+Switch or4 "relay4 status" <light> {mqtt="<[eclipse:test019/R4:state:default]"}
+
+Switch office_logged_in "Office Login [%s]" <clock>
+Switch office_secure "Office Security [%s]" <shield>
+Switch office_logout "Office Logout [%s] <clock>
+String coprocessor "Co-Processor [%s]" <error> {mqtt="<[eclipse:test019/server:state:default]" }
+
