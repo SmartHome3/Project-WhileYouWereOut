@@ -8,7 +8,7 @@ This project is my entry for the Hackster.io Design Challenge For PSOC Analog Co
 ## Getting Started
 
 Clone the repository 
-'''bash
+```bash
 master
    |
    ----Documentation (Currently Empty... Oops!)
@@ -22,13 +22,13 @@ master
    ----Python Script (A Python code for service - MQTT, MFRC etc )
    |
    ----Reference (Everything else)
-'''
+```
 
 The system is divided into two parts in terms of software. The first part is the python script that you can run using 
 
-'''bash
+```bash
 sudo python coprocessor.py
-'''
+```
 
 The second part is OpenHAB and 
 [Openhab Can be downloaded from here](https://openhab.org)
@@ -44,7 +44,7 @@ Wire em up. See my [Youtube channel](https://youtube.com/c/InderpreetSingh) for 
 
 ## License
 
-This project is licensed under the GPLv2 license - see the 
+This project is licensed under the GPLv2 license - see the [LICENSE.md](LICENSE.md) for details
 
 -----> http://ip-v1.blogspot.com
 
