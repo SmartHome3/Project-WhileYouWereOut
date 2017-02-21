@@ -2,7 +2,7 @@
 
 This project is my entry for the Hackster.io Design Challenge For PSOC Analog CoProcessor and Smart Spaces. The ideas is to have a unit that is capable of sensing and control of office lights, fans and computers and can be activated using RFID tags and cards as well. It can also be remotely accessed for monitoring and control of mentioned peripherals and implements the logic to control the office applicances in the absence of the user. The automation is expected to provide savings in electricity as well as the prolonged life of equipment such as computer monitor, lights and fans.
 
-![image of the project](https://)
+![image of the project](https://assets.pinshape.com/uploads/image/file/130743/container_Cypress_PSOC_Project_v19-a.png)
 
 
 ## Getting Started
@@ -34,7 +34,7 @@ The second part is OpenHAB and
 [Openhab Can be downloaded from here](https://openhab.org)
 
 
-The 3D models can be donwloaded from Pinshape [HERE](#)
+The 3D models can be donwloaded from Pinshape [HERE](https://pinshape.com/items/32437-3d-printed-psoc-while-you-were-out)
 
 Wire em up. See my [Youtube channel](https://youtube.com/c/InderpreetSingh) for more videos.
 
