@@ -2,7 +2,7 @@
 
 This project is my entry for the Hackster.io Design Challenge For PSOC Analog CoProcessor and Smart Spaces. The ideas is to have a unit that is capable of sensing and control of office lights, fans and computers and can be activated using RFID tags and cards as well. It can also be remotely accessed for monitoring and control of mentioned peripherals and implements the logic to control the office applicances in the absence of the user. The automation is expected to provide savings in electricity as well as the prolonged life of equipment such as computer monitor, lights and fans.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r_VpPWnMmHs" frameborder="0" allowfullscreen></iframe>
+[![demo](./Reference/demo.png)](https://www.youtube.com/embed/r_VpPWnMmHs)
 
 ![image of the project](./Enclosure/Cypress PSOC Project v19-a.png)
 
@@ -46,7 +46,8 @@ Wire em up. See my [Youtube channel](https://youtube.com/c/InderpreetSingh) for 
 * [Raspberry Pi Image](https://www.raspberrypi.org/downloads/raspbian/)
 * [OpenHAB](https://openhab.org)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/awuQyhztke0" frameborder="0" allowfullscreen></iframe>
+[![PSOC](./Reference/psoc.png)](https://www.youtube.com/embed/awuQyhztke0)
+
 
 ## TODO
 - Write setup script for the python service
