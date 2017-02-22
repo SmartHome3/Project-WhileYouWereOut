@@ -4,6 +4,7 @@ This project is my entry for the Hackster.io Design Challenge For PSOC Analog Co
 
 ![image of the project](./Enclosure/Cypress PSOC Project v19-a.png)
 
+![Block Diagram](./Reference/Slide1.jpg)
 
 ## Getting Started
 
@@ -39,9 +40,9 @@ The 3D models can be donwloaded from Pinshape [HERE](https://pinshape.com/items/
 Wire em up. See my [Youtube channel](https://youtube.com/c/InderpreetSingh) for more videos.
 
 ## Software used
--(Cypress PSOC Creator) [http://www.cypress.com/products/psoc-creator-integrated-design-environment-ide]
--(Raspberry Pi Image)[https://www.raspberrypi.org/downloads/raspbian/]
--(OpenHAB)[https://openhab.org]
+- [Cypress PSOC Creator](http://www.cypress.com/products/psoc-creator-integrated-design-environment-ide)
+-[Raspberry Pi Image](https://www.raspberrypi.org/downloads/raspbian/)
+-[OpenHAB](https://openhab.org)
 
 ## TODO
 - Write setup script for the python service
