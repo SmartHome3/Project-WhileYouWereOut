@@ -38,6 +38,10 @@ The 3D models can be donwloaded from Pinshape [HERE](https://pinshape.com/items/
 
 Wire em up. See my [Youtube channel](https://youtube.com/c/InderpreetSingh) for more videos.
 
+## Software used
+(Cypress PSOC Creator) [http://www.cypress.com/products/psoc-creator-integrated-design-environment-ide]
+(Raspberry Pi Image)[https://www.raspberrypi.org/downloads/raspbian/]
+(OpenHAB)[https://openhab.org]
 
 ## TODO
 - Write setup script for the python service
